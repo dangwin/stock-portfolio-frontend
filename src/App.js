@@ -1,24 +1,30 @@
+import { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { useDispatch } from 'react-redux';
+import { loadUsers } from './reducers/users';
+import UserList from './components/UserList';
+import Portfolio from "./components/Portfolio";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadUsers());
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <UserList/>
+        </Route>
+        <Route path="/users/:userId/stocks">
+          <Portfolio/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

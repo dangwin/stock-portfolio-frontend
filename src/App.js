@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import { useDispatch } from 'react-redux';
 import { loadUsers } from './reducers/users';
-import UserList from './components/UserList';
-import Portfolio from "./components/Portfolio";
+import Users from './pages/Users';
+import Stocks from "./pages/Stocks";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -18,10 +18,10 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact>
-          <UserList/>
+          <Users/>
         </Route>
         <Route path="/users/:userId/stocks">
-          <Portfolio/>
+          <Stocks/>
         </Route>
       </Switch>
     </Router>

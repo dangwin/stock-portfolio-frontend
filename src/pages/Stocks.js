@@ -14,8 +14,8 @@ const Stocks = () => {
 
     return (
         <div>  
-            <Portfolio stocks={stocks} />
-            <StockForm userId = {userId}/>
+            <Portfolio stocks={stocks} userId={userId}/>
+            <StockForm userId={userId} />
             <Link to="/">Back to users</Link>
         </div>
     )

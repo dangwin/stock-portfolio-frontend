@@ -11,10 +11,12 @@ const StockForm = ({ userId }) => {
         dispatch(createStock(userId, formData));
     };
 
+    
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
+            <h3>Purchase Stocks</h3>
             <input {...register("symbol", { required: true })} placeholder= "e.g. TSLA, AAPL"/>
-            <input {...register("quantity", { required: true })} type="number" placeholder="Amount of Shares to Purchase"/>
+            <input {...register("quantity", { required: true })} type="number" placeholder="Amount of Shares"/>
             <input type="submit" />
         </form>
     )

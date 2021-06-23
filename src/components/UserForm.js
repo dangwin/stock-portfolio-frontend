@@ -13,8 +13,11 @@ const UserForm = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
+            <div id = 'User-Submit'>
+            <h3>Add User</h3>
             <input {...register("name", { required: true })} />
             <input type="submit" />
+            </div>
         </form>
     )
 }

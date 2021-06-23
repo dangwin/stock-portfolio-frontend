@@ -8,6 +8,7 @@ import Stocks from "./pages/Stocks";
 import StockQuantityForm from "./components/StockQuantityForm";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+
 function App() {
   const dispatch = useDispatch();
 

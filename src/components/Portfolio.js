@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { deleteStock } from '../reducers/stocks';
+import Table from 'react-bootstrap/Table';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Portfolio = ({ stocks, userId }) => {
     const dispatch = useDispatch();
@@ -16,7 +18,7 @@ const Portfolio = ({ stocks, userId }) => {
     }
 
     return (
-        <table id = 'table'>
+        <Table striped bordered hover variant="dark">
             <tr>
                 <th>Name</th>
                 <th>Symbol</th>
@@ -42,10 +44,10 @@ const Portfolio = ({ stocks, userId }) => {
                         ${(stock.current_price * stock.quantity).toFixed(2)}
                     </td>
                     <td>
-                        <Link to={`/users/${userId}/stocks/${stock.id}/edit`}>Edit</Link>
+                        <Link to={`/users/${userId}/stocks/${stock.id}/edit`}>Update Quantity</Link>
                     </td>
                     <td>
-                        <a href="#" onClick={() => removeStock(stock.id)}>Delete</a>
+                        <a href="#" onClick={() => removeStock(stock.id)}>Sell all shares</a>
                     </td>
                 </tr>
             ))}
@@ -53,10 +55,10 @@ const Portfolio = ({ stocks, userId }) => {
                 <td></td>
                 <td></td>
                 <td></td>
-                <th>Total</th>
+                <th>Portfolio Total</th>
                 <td>${computeTotal(stocks).toFixed(2)}</td>
             </tr>
-        </table>
+        </Table>
     )
 }
 

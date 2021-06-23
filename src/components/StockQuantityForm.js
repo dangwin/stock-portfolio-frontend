@@ -10,9 +10,9 @@ const StockForm = () => {
     const dispatch = useDispatch();
     const stock = useSelector(state => state.stocks.stocks.find(stock => stock.id == stockId));
     const { register, handleSubmit } = useForm();
-    const onSubmit = (formData) => {
+    const onSubmit = async (formData) => {
         console.log(formData);
-        dispatch(editQuantity(userId, stock.id, formData.quantity));
+        await dispatch(editQuantity(userId, stock.id, formData.quantity));
         history.push(`/users/${userId}/stocks`)
     };
 

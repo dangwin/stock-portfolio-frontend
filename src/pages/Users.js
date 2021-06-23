@@ -7,11 +7,17 @@ const Users = () => {
     const users = useSelector(state => state.users.users);
 
     return (
-        <div>
+        <div  className="bg">
+            <h1 id = 'Main-header'>Fantasy Stocks Portflio Stimulator</h1>
+
+            <br></br>
+            <br></br>
+            <br></br>
             <UserList users={users}/>
             <UserForm/>
         </div>
     )
+
 }
 
 export default Users;

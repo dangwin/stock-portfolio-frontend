@@ -6,19 +6,34 @@
 }
 
 #user-header {
-  color: #ff4411; 
-  font-size: 48px; 
+  font-size: 32px; 
   font-family: 'Signika', sans-serif;
+  text-align: center;
+
 }
 
 #view-users-portfolio {
-  background-color: #48b148; /* Green */
+  background-color: #48b148; 
   border: none;
   color: rgb(255, 255, 255);
-  padding: 15px 32px;
+  padding: 10px 22px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  border-radius: 12px;
+  border-radius: 10px;
+  margin:auto;
+  display:block;
+
 }
+#User-Submit{
+  margin: auto;
+  width: 50%;
+  padding: 100px;
+  color: black
+}
+
+#Main-header{
+  text-align: center;
+}
+

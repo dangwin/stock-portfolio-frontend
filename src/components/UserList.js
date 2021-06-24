@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const UserList = ({ users = [] }) => {
     return (
-        <Table striped bordered hover size ="sm" className="font-color" >
+        <Table striped bordered hover size ="sm">
             <tr id = 'user-header'>
                 <th>User</th>
             </tr>

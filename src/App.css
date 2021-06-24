@@ -30,10 +30,23 @@
   margin: auto;
   width: 50%;
   padding: 100px;
-  color: black
+  /* color: black */
 }
 
 #Main-header{
   text-align: center;
 }
 
+#Portfolio-Total{
+  float: right;
+  width: 500px;
+}
+
+.bg .table {
+  color: white;
+}
+
+.bg {
+  color: white;
+  background: url(https://m.foolcdn.com/media/dubs/images/stock_chart_up_2.984be4c3.fill-800x373.jpegquality-50.jpg)
+}

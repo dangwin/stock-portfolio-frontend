@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { useDispatch } from 'react-redux';
 import { loadUsers } from './reducers/users';

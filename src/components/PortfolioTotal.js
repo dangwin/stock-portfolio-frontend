@@ -1,13 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
 
-class PortfolioTotal extends React.Component {
+
+class PortfolioTotal extends Component {
+
+computeBalance = (stocks) => {
+    return stocks.reduce((total, stock) =>
+    total + (stock.current_price * stock.quantity), 0);
+}
+
     render(){
         return (
-            <div>
-            
-            
-            
-            
+            <div id = 'Portfolio-Total'>
+
+                 <h1> Portfolio Total: ${this.computeBalance(this.props.stocks).toFixed(2)} </h1>
             
             </div>
 
@@ -15,6 +21,10 @@ class PortfolioTotal extends React.Component {
     }
 }
 
+function mapStateToProps(state) {
+    return {
+        stocks: state.stocks.stocks
+    };
+}
 
-
-export default PortfolioTotal
+export default connect(mapStateToProps)(PortfolioTotal);

@@ -5,6 +5,8 @@ import { Container } from "react-bootstrap";
 import { loadStocks } from '../reducers/stocks';
 import Portfolio from "../components/Portfolio";
 import StockForm from "../components/StockForm";
+import PortfolioTotal from "../components/PortfolioTotal";
+
 
 
 const Stocks = () => {
@@ -24,6 +26,9 @@ const Stocks = () => {
             <br></br>
             <Portfolio stocks={stocks} userId={userId}/>
             <StockForm userId={userId} />
+            <br></br>
+            <br></br>
+            <PortfolioTotal />
             <br></br>
             <br></br>
             <Link to="/">Back to users</Link>

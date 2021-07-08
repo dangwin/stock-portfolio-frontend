@@ -9,7 +9,6 @@ const Users = () => {
     return (
         <div  className="bg">
             <h1 id = 'Main-header'>Fantasy Stocks Portfolio Simulator</h1>
-
             <br></br>
             <br></br>
             <br></br>
